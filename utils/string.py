@@ -58,3 +58,24 @@ def rpad(orig, char, length):
     if missing_len > 0:
         orig = '{}{}'.format(orig, (missing_len * char))
     return orig
+
+
+def replace(orig, position, char):
+    """
+    Replace a character in string by position
+    :param orig: origin string
+    :param position: position to be replaced
+    :param char: character to replace
+    :return:
+    """
+    str_len = len(orig)
+    if position < 0 or position > str_len - 1:
+        return orig
+
+    # Method 1
+    # orig = list(orig)
+    # orig[position] = char
+    # return ''.join(orig)
+
+    # Method 2 - Faster
+    return orig[:position] + char + orig[position + 1:]
