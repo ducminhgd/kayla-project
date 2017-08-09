@@ -16,3 +16,22 @@ def hex_to_bin(hex_string, min_width=0):
     :return:
     """
     return '{0:0{width}b}'.format(int(hex_string, 16), width=min_width)
+
+
+def zero_lpad(number, length):
+    """
+    Fill 0 on the left of number
+    :param number: number to be padded
+    :param length: length of result string
+    :return:
+    """
+    return '{number:0>{length}}'.format(number=number, length=length)
+
+def zero_rpad(number, length):
+    """
+    Fill 0 on the right of number
+    :param number: number to be padded
+    :param length: length of result string
+    :return:
+    """
+    return '{number:0<{length}}'.format(number=number, length=length)
