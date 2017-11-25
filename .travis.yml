@@ -1,0 +1,20 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.6"
+
+before_install:
+  - echo "INSTALL"
+  - sudo apt-get install -y python-virtualenv
+  - virtualenv -p python3.6 .venv
+
+install:
+  - echo "INSTALL"
+  - pip install -r requirements.txt
+
+before_script:
+  - echo "BEFORE SCRIPT"
+
+script:
+  - echo "TODO: SCRIPT HERE"

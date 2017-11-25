@@ -99,5 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
-/.idea
-/main.py
+
+.idea
+main.py
+.vagrant/
+Vagrantfile
