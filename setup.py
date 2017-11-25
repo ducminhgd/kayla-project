@@ -1,12 +1,17 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
+from kayla import __version__, __author__, __email__, __url__
 
 setup(
     name='kayla-project',
-    packages=['kayla', 'kayla.exception', 'kayla.hash', 'kayla.signature', 'kayla.utils'],
-    version='0.0.1',
+    # packages=['kayla', 'kayla.exception', 'kayla.hash', 'kayla.signature', 'kayla.utils'],
+    packages=find_packages(where='.', exclude=[
+        'sample_code',
+        'tests',
+    ]),
+    version=__version__,
     description='Utility package',
-    author='Gia Duong Duc Minh',
-    author_email='giaduongducminh@gmail.com',
-    url='https://github.com/ducminhgd/kayla-project',
-    keywords = ['kayla', 'utility', 'helpers', 'library'],
+    author=__author__,
+    author_email=__email__,
+    url=__url__,
+    keywords=['kayla', 'utility', 'helpers', 'library'],
 )
