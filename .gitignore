@@ -104,4 +104,4 @@ ENV/
 main.py
 .vagrant/
 Vagrantfile
-.vscode/
+.vscode

@@ -17,4 +17,4 @@ before_script:
   - echo "BEFORE SCRIPT"
 
 script:
-  - echo "TODO: SCRIPT HERE"
+  - echo "TODO SCRIPT HERE"
