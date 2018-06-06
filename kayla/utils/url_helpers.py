@@ -35,11 +35,3 @@ def build_query_string(params, order_by_key=False):
     if order_by_key:
         params = sorted(params.items(), key=lambda val: val[0])
     return urllib.urlencode(params)
-
-d = {
-    'phone_number': '0939545535',
-    'bank_tx_id': 1,
-    'request_time': '2017-06-06 12:00:00',
-}
-
-print build_query_string(d, True)
